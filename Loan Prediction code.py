@@ -33,7 +33,7 @@ print("DATA TYPES OF EACH FEATURE INVOLVED IN DATASET:")
 print(train.dtypes)
 print("\nLoan_Status is our target variable")
 print("\n\nDESCRIPTION ABOUT DATA TYPES INVOLLVED IN DATASET:")
-print("object: Object format means variables are categorical")
+print("object: Instance of a class")
 print("int64: It represents the integer variables")
 print("float64: It represents the variable which have some decimal values involved")
 
@@ -142,12 +142,12 @@ print("\nSplit up of Loan_Status based on Gender")
 print(Gender_crosstab)
 #Finding probability split up of Loan_Status based on Gender 
 print("\nSplit up of Loan_Status based on Gender")
-    #Axis 0 => Y/N ; Axis 1 => Male/Female
-    #Dividing Yes and No of Male and female by corresponding total number of gender count 
-Gender_prob = Gender_crosstab.div(Gender_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Male/Female
+    #Getting probability of each loan status for each gender 
+Gender_prob = Gender_crosstab.div(Gender_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Gender_prob)
 #Plotting Graph
-Gender_crosstab.div(Gender_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Gender Status vs Loan Status')
+Gender_crosstab.div(Gender_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Gender Status vs Loan Status')
 plt.show()
 
     #Split up of Loan_Status based on Married or not
@@ -156,12 +156,12 @@ print("\n\nSplit up of Loan_Status based on Married or not")
 print(Married_crosstab)
 #Finding probability split up of Loan_Status based on Married or not
 print("\nSplit up of Loan_Status based on Married or not - Probabillity")
-    #Axis 0 => Y/N ; Axis 1 => Married/Unmarried
-    #Dividing Yes and No of Male and female by corresponding total number of Married and Unmarried 
-Married_prob = Married_crosstab.div(Married_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Married/Unmarried
+    #Getting probability of each loan status for each marriage status 
+Married_prob = Married_crosstab.div(Married_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Married_prob)
 #Plotting Graph
-Married_crosstab.div(Married_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Married Status vs Loan Status')
+Married_crosstab.div(Married_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Married Status vs Loan Status')
 plt.show()
 
     #Split up of Loan_Status based on Education
@@ -170,12 +170,12 @@ print("\n\nSplit up of Loan_Status based on Education")
 print(Education_crosstab)
 #Finding probability split up of Loan_Status based on Education
 print("\nSplit up of Loan_Status based on Education - Probabillity")
-    #Axis 0 => Y/N ; Axis 1 => Graduated/Ungraduated
-    #Dividing Yes and No of Male and female by corresponding total number of Graduated/Ungraduated 
-Education_prob = Education_crosstab.div(Education_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Graduated/Ungraduated
+    #Getting probability of each loan status for each education status
+Education_prob = Education_crosstab.div(Education_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Education_prob)
 #Plotting Graph
-Education_crosstab.div(Education_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Education Status vs Loan Status')
+Education_crosstab.div(Education_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Education Status vs Loan Status')
 plt.show()
 
     #Split up of Loan_Status based on Selfemployed or not
@@ -184,12 +184,12 @@ print("\n\nSplit up of Loan_Status based on Selfemployed or not")
 print(Selfemployed_crosstab)
 #Finding probability split up of Loan_Status based on Selfemployed or not
 print("\nSplit up of Loan_Status based on Self employed or Not - Probabillity")
-    #Axis 0 => Y/N ; Axis 1 => Selfemployed/Not Selfemployed
-    #Dividing Yes and No of Male and female by corresponding total number of Selfemployed/not Selfemployed 
-Selfemployed_prob = Selfemployed_crosstab.div(Selfemployed_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Selfemployed/Not Selfemployed
+    #Getting probability of each loan status for each self employment status 
+Selfemployed_prob = Selfemployed_crosstab.div(Selfemployed_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Selfemployed_prob)
 #Plotting Graph
-Selfemployed_crosstab.div(Selfemployed_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Selfemployed Status vs Loan Status')
+Selfemployed_crosstab.div(Selfemployed_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Selfemployed Status vs Loan Status')
 plt.show()
 
     #Split up of Loan_Status based on Number of dependents
@@ -198,12 +198,12 @@ print("\n\nSplit up of Loan_Status based on number of Dependents")
 print(Dependents_crosstab)
 #Finding probability split up of Loan_Status based on number of Dependents
 print("\nSplit up of Loan_Status based on number of Dependents - Probabillity")
-    #Axis 0 => Y/N ; Axis 1 => Number of Dependents
-    #Dividing Yes and No of Male and female by corresponding total number of Dependents 
-Dependents_prob = Dependents_crosstab.div(Dependents_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Number of Dependents
+    #Getting probability of each loan status for each number of dependents
+Dependents_prob = Dependents_crosstab.div(Dependents_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Dependents_prob)
 #Plotting Graph
-Dependents_crosstab.div(Dependents_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Dependents Status vs Loan Status')
+Dependents_crosstab.div(Dependents_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Dependents Status vs Loan Status')
 plt.show()
 
     #Split up of Loan_Status based on Credit History
@@ -212,12 +212,12 @@ print("\n\nSplit up of Loan_Status based on Credit History")
 print(Credit_History_crosstab)
 #Finding probability split up of Loan_Status based on Credit History
 print("\nSplit up of Loan_Status based on Credit History - Probabillity")
-    #Axis 0 => Y/N ; Axis 1 => Credit History
-    #Dividing Yes and No of Male and female by corresponding total number of Credit_History(0/1)
-Credit_History_prob = Credit_History_crosstab.div(Credit_History_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Credit History
+    #Getting probability of each loan status for each credit history status
+Credit_History_prob = Credit_History_crosstab.div(Credit_History_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Credit_History_prob)
 #Plotting Graph
-Credit_History_crosstab.div(Credit_History_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Credit History Status vs Loan Status')
+Credit_History_crosstab.div(Credit_History_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Credit History Status vs Loan Status')
 plt.show()
 
     #Split up of Loan_Status based on Property Area
@@ -226,12 +226,12 @@ print("\n\nSplit up of Loan_Status based on Property Area")
 print(Property_Area_crosstab)
 #Finding probability split up of Loan_Status based on Property Area
 print("\nSplit up of Loan_Status based on Property Area - Probabillity")
-    #Axis 0 => Y/N ; Axis 1 => Property_Area
-    #Dividing Yes and No of Male and female by corresponding total number of Property_Area 
-Property_Area_prob = Property_Area_crosstab.div(Property_Area_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Property_Area
+    #Getting probability of each loan status for each proprty area category 
+Property_Area_prob = Property_Area_crosstab.div(Property_Area_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Property_Area_prob)
 #Plotting Graph
-Property_Area_crosstab.div(Property_Area_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Property Area Status vs Loan Status')
+Property_Area_crosstab.div(Property_Area_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Property Area Status vs Loan Status')
 plt.show()
 
 
@@ -257,12 +257,12 @@ print("\nSplit up of Loan_Status based on Income")
 print(Income_bin_crosstab)
 #Finding probability split up of Loan_Status based on Income
 print("\nSplit up of Loan_Status based on Income - Probability")
-    #Axis 0 => Y/N ; Axis 1 => Income
-    #Dividing Yes and No of Male and female by corresponding Income
-Income_prob = Income_bin_crosstab.div(Income_bin_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Income_bin
+    #Getting probability of each loan status for each Income bin category
+Income_prob = Income_bin_crosstab.div(Income_bin_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Income_prob)
 #Plotting graph
-Income_bin_crosstab.div(Income_bin_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Income Status vs Loan Status')
+Income_bin_crosstab.div(Income_bin_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Income Status vs Loan Status')
 plt.show()
 print("It can be inferred that Applicant income does not affect the chances of loan approval")
 
@@ -281,12 +281,12 @@ print("\nSplit up of Loan_Status based on Coapplicant Income")
 print(Coapplicant_Income_bin_crosstab)
 #Finding probability split up of Loan_Status based on Income
 print("\nSplit up of Loan_Status based on Coapplicant Income - Probability")
-    #Axis 0 => Y/N ; Axis 1 => Coapplicant Income
-    #Dividing Yes and No of Male and female by corresponding Co-Applicant Income
-Coapplicant_Income_prob = Coapplicant_Income_bin_crosstab.div(Coapplicant_Income_bin_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Coapplicant Income
+    #Getting probability of each loan status for each Co-applicant bin category
+Coapplicant_Income_prob = Coapplicant_Income_bin_crosstab.div(Coapplicant_Income_bin_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Coapplicant_Income_prob)
 #Plotting graph
-Coapplicant_Income_bin_crosstab.div(Coapplicant_Income_bin_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Coapplicant Income Status vs Loan Status')
+Coapplicant_Income_bin_crosstab.div(Coapplicant_Income_bin_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Coapplicant Income Status vs Loan Status')
 plt.show()
 print("It can be inferred that if coapplicant’s income is less the chances of loan approval are high")
 print("""But this does not look right. The possible reason behind this may be that most of the applicants don’t have any coapplicant.
@@ -311,12 +311,12 @@ print("\nSplit up of Loan_Status based on Total Income (Applicant and Co-Applica
 print(Total_Income_bin_crosstab)
 #Finding probability split up of Loan_Status based on Total Income
 print("\nSplit up of Loan_Status based on Coapplicant Income (Applicant and Co-Applicant) - Probability")
-    #Axis 0 => Y/N ; Axis 1 => Total Income
-    #Dividing Yes and No of Male and female by corresponding Total Income
-Total_Income_prob = Total_Income_bin_crosstab.div(Total_Income_bin_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => Total Income
+    #Getting probability of each loan status for each total applicant bin category
+Total_Income_prob = Total_Income_bin_crosstab.div(Total_Income_bin_crosstab.sum(axis = 1).astype(float), axis=0)
 print(Total_Income_prob)
 #Plotting graph
-Total_Income_bin_crosstab.div(Total_Income_bin_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='Total Income Status vs Loan Status')
+Total_Income_bin_crosstab.div(Total_Income_bin_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='Total Income Status vs Loan Status')
 plt.show()
 print("""It can be inferred that proportion of loans getting approved for applicants having low Total Income is the least.""")
 
@@ -335,12 +335,12 @@ print("\nSplit up of Loan_Status based on LoanAmount")
 print(LoanAmount_bin_crosstab)
 #Finding probability split up of Loan_Status based on LoanAmount
 print("\nSplit up of Loan_Status based on LoanAmount - Probability")
-    #Axis 0 => Y/N ; Axis 1 => LoanAmount
-    #Dividing Yes and No of Male and female by corresponding LoanAmount
-LoanAmount_prob = LoanAmount_bin_crosstab.div(LoanAmount_bin_crosstab.sum(1).astype(float), axis=0)
+    #Axis 1 => Y/N ; Axis 0 => LoanAmount
+    #Getting probability of each loan status for each Loan Amount category
+LoanAmount_prob = LoanAmount_bin_crosstab.div(LoanAmount_bin_crosstab.sum(axis = 1).astype(float), axis=0)
 print(LoanAmount_prob)
 #Plotting graph
-LoanAmount_bin_crosstab.div(LoanAmount_bin_crosstab.sum(1).astype(float), axis=0).plot.bar(stacked = True , title='LoanAmount Status vs Loan Status')
+LoanAmount_bin_crosstab.div(LoanAmount_bin_crosstab.sum(axis = 1).astype(float), axis=0).plot.bar(stacked = True , title='LoanAmount Status vs Loan Status')
 plt.show()
 print("It can be seen that the proportion of approved loans is higher for Low and Average Loan Amount as compared to that of High Loan Amount")
 
@@ -353,7 +353,7 @@ train['Dependents'].replace('3+', 3,inplace=True)
 train['Loan_Status'].replace('N', 0,inplace=True)
 train['Loan_Status'].replace('Y', 1,inplace=True)
 #Correlation indicates the extent to which two or more variables fluctuate together.
-    #Correlation found between numerical columns in training dataset
+    #Correlation found only between numerical columns in training dataset
 matrix = train.corr()
 #f, ax = plt.subplots(figsize=(9, 6))
 #Plotting heatmap for the correlation matrix found
@@ -386,18 +386,15 @@ train['LoanAmount'].fillna(train['LoanAmount'].median(), inplace=True)
 #Removing skewness by taking log transformation
     #Log-> has more effect on larger values
 train['LoanAmount_log'] = np.log(train['LoanAmount'])
-#Plotting graph on log transformed values
-train['LoanAmount_log'].hist(bins=20)
-plt.show()
 
 ##############################################################################################################################################
 
 #Building Logistic regression model
     #Dropping ID
-train=train.drop('Loan_ID',axis=1) 
+train=train.drop('Loan_ID', axis=1) 
 
 #Splitting train dataset into dependent and independent features
-X = train.drop('Loan_Status',1) 
+X = train.drop('Loan_Status', axis=1) 
 y = train.Loan_Status
 
 #Performing One-hot encoding for CATEGORICAL features
@@ -405,6 +402,8 @@ X=pd.get_dummies(X)
 print("\n\nTraining data after performing One-hot encoding")
 train=pd.get_dummies(train)
 print(train.head(5))
+print("\n\nDummy columns that are automatically generated for the purpose of One hot encoding")
+print(train.columns)
 
 #Splitting training data for training and validation
     #70% data for training ; 30% data for validation
@@ -421,7 +420,7 @@ print("\n\nAccuracy of the Logistic Regression model built is")
 print(accuracy_score(y_cv,pred_cv))
 
 ##############################################################################################################################################
-
+#Validating models using Stratified K-fold validation method
 
 #Logistic Regression - Stratified k-folds cross Validation
 print("\n\nLogistic Regression - Stratified k-folds cross Validation")
@@ -429,12 +428,13 @@ tot_acc = 0
 #To make count of iterations
 i=1
 #Data is split into 5 folds
-kf = StratifiedKFold(n_splits=5,random_state=1,shuffle=True) 
-for train_index,test_index in kf.split(X,y):
+kf = StratifiedKFold(n_splits=5,random_state=1,shuffle=True)
+# Indices segregated for training and validation are retrieved using variable as lists
+for train_indices,test_indices in kf.split(X,y):
     print('\nIteration {} of kfold {}'.format(i,kf.n_splits))
-    #Splitting training data for training and validation based on label assigned by KF
-    xtr,xvl = X.loc[train_index],X.loc[test_index]     
-    ytr,yvl = y[train_index],y[test_index]         
+    #Splitting training data for training and validation based on indices segregated by KF
+    xtr,xvl = X.iloc[train_indices],X.iloc[test_indices]     
+    ytr,yvl = y.iloc[train_indices],y.iloc[test_indices]
     #Building Logistic Regression model 
     model = LogisticRegression(random_state=1)
     #Fitting data
@@ -461,11 +461,12 @@ tot_acc = 0
 i=1
 #Data is split into 5 folds
 kf = StratifiedKFold(n_splits=5,random_state=1,shuffle=True) 
-for train_index,test_index in kf.split(X,y):
+# Indices segregated for training and validation are retrieved using variable as lists
+for train_indices,test_indices in kf.split(X,y):
     print('\nIteration {} of kfold {}'.format(i,kf.n_splits))
-    #Splitting training data for training and validation based on label assigned by KF
-    xtr,xvl = X.loc[train_index],X.loc[test_index]     
-    ytr,yvl = y[train_index],y[test_index]         
+    #Splitting training data for training and validation based on indices segregated by KF
+    xtr,xvl = X.loc[train_indices],X.loc[test_indices]     
+    ytr,yvl = y[train_indices],y[test_indices]         
     #Building Decision tree model 
     model = tree.DecisionTreeClassifier(random_state=1)
     #Fitting data
@@ -492,11 +493,12 @@ tot_acc = 0
 i=1
 #Data is split into 5 folds
 kf = StratifiedKFold(n_splits=5,random_state=1,shuffle=True) 
-for train_index,test_index in kf.split(X,y):
+# Indices segregated for training and validation are retrieved using variable as lists
+for train_indices,test_indices in kf.split(X,y):
     print('\nIteration {} of kfold {}'.format(i,kf.n_splits))
-    #Splitting training data for training and validation based on label assigned by KF
-    xtr,xvl = X.loc[train_index],X.loc[test_index]     
-    ytr,yvl = y[train_index],y[test_index]         
+    #Splitting training data for training and validation based on indices segregated by KF
+    xtr,xvl = X.loc[train_indices],X.loc[test_indices]     
+    ytr,yvl = y[train_indices],y[test_indices]         
     #Building Decision tree model 
     model = RandomForestClassifier(random_state=1, max_depth=10)
     #Fitting data
@@ -523,11 +525,12 @@ tot_acc = 0
 i=1
 #Data is split into 5 folds
 kf = StratifiedKFold(n_splits=5,random_state=1,shuffle=True) 
-for train_index,test_index in kf.split(X,y):
+# Indices segregated for training and validation are retrieved using variable as lists
+for train_indices,test_indices in kf.split(X,y):
     print('\nIteration {} of kfold {}'.format(i,kf.n_splits))
-    #Splitting training data for training and validation based on label assigned by KF
-    xtr,xvl = X.loc[train_index],X.loc[test_index]     
-    ytr,yvl = y[train_index],y[test_index]         
+    #Splitting training data for training and validation based on indices segregated by KF
+    xtr,xvl = X.loc[train_indices],X.loc[test_indices]     
+    ytr,yvl = y[train_indices],y[test_indices]         
     #Building Decision tree model 
     model = XGBClassifier(random_state=1, n_estimators=50)
     #Fitting data
@@ -554,26 +557,8 @@ print("XGBoosting : " +str(XGB_mean_acc))
 
 #Plotting graph for the comparison
 Accuracies = {'Logistic Regression' : LR_mean_acc, 'Decision Trees' : DT_mean_acc, 'Random Forest' : RF_mean_acc, 'XGBoosting' : XGB_mean_acc}
-ax = plt.bar(range(len(Accuracies)), list(Accuracies.values()), align='center')
+plt.bar(x = range(len(Accuracies)), height = list(Accuracies.values()), align = 'center')
 plt.xticks(range(len(Accuracies)), list(Accuracies.keys()))
 plt.yticks(np.arange(0, 1, 0.05))
 plt.title('Accuracy Comparison')
 plt.show()
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
