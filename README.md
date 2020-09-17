@@ -6,11 +6,11 @@
 **Stratified k-folds cross Validation** is used while validating each model to ensure **genericness** of model<br><br>
 
 # Preprocessing steps covered:
-### &nbsp;1. Treating missing values
+&nbsp;<b>1. TREATING MISSING VALUES<br></b>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.Deleting all/particular rows having empty cells<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.Imputing missing values cells<br>
-### &nbsp;2. One Hot Encoding
-### &nbsp;3. Feature scaling
+&nbsp;<b>2. ONE HOT ENCODING<br></b>
+&nbsp;<b>3. FEATURE SCALING<br></b>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.Standardization<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.Normalization<br>
 
