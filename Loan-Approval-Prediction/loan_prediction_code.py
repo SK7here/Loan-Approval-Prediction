@@ -5,9 +5,9 @@
 
 
 #LOADING LIBRARIES
-import pandas as pd                    # for working with data
-import numpy as np                     # For mathematical calculations 
-import seaborn as sns                  # For data visualization 
+import pandas as pd                    # for working with DataFrames
+import numpy as np                     # For working with arrays 
+import seaborn as sns                  # For advanced data visualization 
 import matplotlib.pyplot as plt        # For plotting graphs
 import warnings                        # for throwing exceptions       
 warnings.filterwarnings("ignore")      # To ignore any warnings
